@@ -102,7 +102,7 @@ LOAD /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x
                 0x08000000                fpn_vector
                 0x08000194                        . = ALIGN (0x4)
 
-.text           0x080001a0     0x26bc
+.text           0x080001a0     0x26cc
                 0x080001a0                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001a0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crti.o
@@ -111,7 +111,7 @@ LOAD /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x
                 0x080001a0                _stack_init
                 0x080001a8                _mainCRTStartup
                 0x080001a8                _start
- .text          0x0800021c      0x47c src/obj/main.o
+ .text          0x0800021c      0x488 src/obj/main.o
                 0x0800021c                wait_ms
                 0x08000258                I2C1_init
                 0x08000340                I2C1_byte_read
@@ -119,473 +119,473 @@ LOAD /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x
                 0x080004d8                configure_i2c_pullup
                 0x08000588                checkINT_init
                 0x080005b4                checkINT
-                0x080005e0                main
- .text          0x08000698      0x404 src/obj/syscalls.o
-                0x08000698                UART_GPIO_init
-                0x0800073c                UART_CONFIG_init
-                0x080007e4                UART_write
-                0x08000814                UART_read
-                0x0800083c                initialise_monitor_handles
-                0x0800084c                _getpid
-                0x0800085a                _kill
-                0x0800087a                _exit
-                0x08000890                _read
-                0x080008ca                _write
-                0x08000902                _close
-                0x08000918                _fstat
-                0x08000936                _isatty
-                0x0800094a                _lseek
-                0x08000962                _open
-                0x0800097c                _wait
-                0x0800099a                _unlink
-                0x080009b8                _times
-                0x080009ce                _stat
-                0x080009ec                _link
-                0x08000a0c                _fork
-                0x08000a22                _execve
-                0x08000a44                _sbrk
- .text          0x08000a9c       0x70 src/obj/startup_STM32F401RE.o
-                0x08000a9c                Reset_handler
-                0x08000b04                UART2_handler
-                0x08000b04                EXTI15_10_handler
-                0x08000b04                DMA1_Stream7_handler
-                0x08000b04                UART1_handler
-                0x08000b04                TIM1_UP_TIM10_handler
-                0x08000b04                EXTI0_handler
-                0x08000b04                DMA1_Stream1_handler
-                0x08000b04                SDIO_handler
-                0x08000b04                NMI_handler
-                0x08000b04                DMA2_Stream3_handler
-                0x08000b04                TIM2_handler
-                0x08000b04                SPI3_handler
-                0x08000b04                TIM3_handler
-                0x08000b04                WWDG_handler
-                0x08000b04                UART6_handler
-                0x08000b04                SPI2_handler
-                0x08000b04                UsuageFault_handler
-                0x08000b04                SVCall_handler
-                0x08000b04                DMA2_Stream6_handler
-                0x08000b04                DebugMonitor_handler
-                0x08000b04                I2C3_ER_handler
-                0x08000b04                DMA1_Stream3_handler
-                0x08000b04                MemManage_handler
-                0x08000b04                SPI4_handler
-                0x08000b04                HardFault_handler
-                0x08000b04                DMA1_Stream5_handler
-                0x08000b04                FPU_handler
-                0x08000b04                DMA2_Stream5_handler
-                0x08000b04                EXITI21_TAMP_STAMP_handler
-                0x08000b04                EXTI18_OTG_FS_WKUP_handler
-                0x08000b04                RCC_handler
-                0x08000b04                Systick_handler
-                0x08000b04                EXTI2_handler
-                0x08000b04                DMA2_Stream1_handler
-                0x08000b04                I2C1_ER_handler
-                0x08000b04                EXTI9_5__handler
-                0x08000b04                EXTI17_RTC_Alarm_handler
-                0x08000b04                I2C2_EV_handler
-                0x08000b04                EXITI22_RTC_WKUP_handler
-                0x08000b04                EXTI3_handler
-                0x08000b04                DMA2_Stream0_handler
-                0x08000b04                FLASH_handler
-                0x08000b04                OTG_FS_handler
-                0x08000b04                DMA1_Stream4_handler
-                0x08000b04                I2C2_ER_handler
-                0x08000b04                TIM1_BRK_TIM9_handler
-                0x08000b04                TIM4_handler
-                0x08000b04                DMA1_Stream2_handler
-                0x08000b04                EXTI4_handler
-                0x08000b04                DMA1_Stream6_handler
-                0x08000b04                ADC_handler
-                0x08000b04                I2C1_EV_handler
-                0x08000b04                SPI1_handler
-                0x08000b04                DMA2_Stream4_handler
-                0x08000b04                PendSV_handler
-                0x08000b04                DMA2_Stream7_handler
-                0x08000b04                DMA1_Stream0_handler
-                0x08000b04                DMA2_Stream2_handler
-                0x08000b04                EXTI1_handler
-                0x08000b04                TIM1_TRG_COM_TIM11_handler
-                0x08000b04                TIM5_handler
-                0x08000b04                EXITI16_PVD__handler
-                0x08000b04                I2C3_EV_handler
-                0x08000b04                BusFault_handler
-                0x08000b04                TIM1_CC_handler
-                0x08000b04                Default_handler
- .text          0x08000b0c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
- .text          0x08000b0c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
- .text          0x08000b0c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
- .text          0x08000b0c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
- .text          0x08000b0c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
- .text          0x08000b0c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
- .text          0x08000b0c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .text          0x08000b0c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-impure.o)
- .text          0x08000b0c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
- *fill*         0x08000b0c        0x4 
- .text          0x08000b10       0xa0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
-                0x08000b10                memchr
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtend.o
- .text          0x08000bb0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtn.o
+                0x08000610                main
+ .text          0x080006a4      0x404 src/obj/syscalls.o
+                0x080006a4                UART_GPIO_init
+                0x08000748                UART_CONFIG_init
+                0x080007f0                UART_write
+                0x08000820                UART_read
+                0x08000848                initialise_monitor_handles
+                0x08000858                _getpid
+                0x08000866                _kill
+                0x08000886                _exit
+                0x0800089c                _read
+                0x080008d6                _write
+                0x0800090e                _close
+                0x08000924                _fstat
+                0x08000942                _isatty
+                0x08000956                _lseek
+                0x0800096e                _open
+                0x08000988                _wait
+                0x080009a6                _unlink
+                0x080009c4                _times
+                0x080009da                _stat
+                0x080009f8                _link
+                0x08000a18                _fork
+                0x08000a2e                _execve
+                0x08000a50                _sbrk
+ .text          0x08000aa8       0x70 src/obj/startup_STM32F401RE.o
+                0x08000aa8                Reset_handler
+                0x08000b10                UART2_handler
+                0x08000b10                EXTI15_10_handler
+                0x08000b10                DMA1_Stream7_handler
+                0x08000b10                UART1_handler
+                0x08000b10                TIM1_UP_TIM10_handler
+                0x08000b10                EXTI0_handler
+                0x08000b10                DMA1_Stream1_handler
+                0x08000b10                SDIO_handler
+                0x08000b10                NMI_handler
+                0x08000b10                DMA2_Stream3_handler
+                0x08000b10                TIM2_handler
+                0x08000b10                SPI3_handler
+                0x08000b10                TIM3_handler
+                0x08000b10                WWDG_handler
+                0x08000b10                UART6_handler
+                0x08000b10                SPI2_handler
+                0x08000b10                UsuageFault_handler
+                0x08000b10                SVCall_handler
+                0x08000b10                DMA2_Stream6_handler
+                0x08000b10                DebugMonitor_handler
+                0x08000b10                I2C3_ER_handler
+                0x08000b10                DMA1_Stream3_handler
+                0x08000b10                MemManage_handler
+                0x08000b10                SPI4_handler
+                0x08000b10                HardFault_handler
+                0x08000b10                DMA1_Stream5_handler
+                0x08000b10                FPU_handler
+                0x08000b10                DMA2_Stream5_handler
+                0x08000b10                EXITI21_TAMP_STAMP_handler
+                0x08000b10                EXTI18_OTG_FS_WKUP_handler
+                0x08000b10                RCC_handler
+                0x08000b10                Systick_handler
+                0x08000b10                EXTI2_handler
+                0x08000b10                DMA2_Stream1_handler
+                0x08000b10                I2C1_ER_handler
+                0x08000b10                EXTI9_5__handler
+                0x08000b10                EXTI17_RTC_Alarm_handler
+                0x08000b10                I2C2_EV_handler
+                0x08000b10                EXITI22_RTC_WKUP_handler
+                0x08000b10                EXTI3_handler
+                0x08000b10                DMA2_Stream0_handler
+                0x08000b10                FLASH_handler
+                0x08000b10                OTG_FS_handler
+                0x08000b10                DMA1_Stream4_handler
+                0x08000b10                I2C2_ER_handler
+                0x08000b10                TIM1_BRK_TIM9_handler
+                0x08000b10                TIM4_handler
+                0x08000b10                DMA1_Stream2_handler
+                0x08000b10                EXTI4_handler
+                0x08000b10                DMA1_Stream6_handler
+                0x08000b10                ADC_handler
+                0x08000b10                I2C1_EV_handler
+                0x08000b10                SPI1_handler
+                0x08000b10                DMA2_Stream4_handler
+                0x08000b10                PendSV_handler
+                0x08000b10                DMA2_Stream7_handler
+                0x08000b10                DMA1_Stream0_handler
+                0x08000b10                DMA2_Stream2_handler
+                0x08000b10                EXTI1_handler
+                0x08000b10                TIM1_TRG_COM_TIM11_handler
+                0x08000b10                TIM5_handler
+                0x08000b10                EXITI16_PVD__handler
+                0x08000b10                I2C3_EV_handler
+                0x08000b10                BusFault_handler
+                0x08000b10                TIM1_CC_handler
+                0x08000b10                Default_handler
+ .text          0x08000b18        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
+ .text          0x08000b18        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
+ .text          0x08000b18        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
+ .text          0x08000b18        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+ .text          0x08000b18        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
+ .text          0x08000b18        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
+ .text          0x08000b18        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .text          0x08000b18        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-impure.o)
+ .text          0x08000b18        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
+ *fill*         0x08000b18        0x8 
+ .text          0x08000b20       0xa0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
+                0x08000b20                memchr
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtend.o
+ .text          0x08000bc0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtn.o
  *(.text.*)
  .text.deregister_tm_clones
-                0x08000bb0       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
+                0x08000bc0       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
  .text.register_tm_clones
-                0x08000bcc       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
+                0x08000bdc       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
  .text.__do_global_dtors_aux
-                0x08000bf0       0x28 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
+                0x08000c00       0x28 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
  .text.frame_dummy
-                0x08000c18       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
- .text.exit     0x08000c3c       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
-                0x08000c3c                exit
+                0x08000c28       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
+ .text.exit     0x08000c4c       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
+                0x08000c4c                exit
  .text.__libc_init_array
-                0x08000c60       0x48 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
-                0x08000c60                __libc_init_array
+                0x08000c70       0x48 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
+                0x08000c70                __libc_init_array
  .text._printf_r
-                0x08000ca8       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
-                0x08000ca8                _printf_r
-                0x08000ca8                _iprintf_r
- .text.printf   0x08000cc4       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
-                0x08000cc4                printf
-                0x08000cc4                iprintf
+                0x08000cb8       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
+                0x08000cb8                _printf_r
+                0x08000cb8                _iprintf_r
+ .text.printf   0x08000cd4       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
+                0x08000cd4                printf
+                0x08000cd4                iprintf
  .text.__sfputc_r
-                0x08000ce8       0x2a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x08000cf8       0x2a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x08000d12       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
-                0x08000d12                __sfputs_r
+                0x08000d22       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x08000d22                __sfputs_r
  .text.__sprint_r
-                0x08000d36       0x1a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
-                0x08000d36                __sprint_r
+                0x08000d46       0x1a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x08000d46                __sprint_r
  .text._vfprintf_r
-                0x08000d50      0x230 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
-                0x08000d50                _vfiprintf_r
-                0x08000d50                _vfprintf_r
+                0x08000d60      0x230 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x08000d60                _vfiprintf_r
+                0x08000d60                _vfprintf_r
  .text.vfprintf
-                0x08000f80       0x14 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
-                0x08000f80                vfiprintf
-                0x08000f80                vfprintf
+                0x08000f90       0x14 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x08000f90                vfiprintf
+                0x08000f90                vfprintf
  .text.__swbuf_r
-                0x08000f94       0x7c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
-                0x08000f94                __swbuf_r
- .text.__swbuf  0x08001010       0x10 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
-                0x08001010                __swbuf
+                0x08000fa4       0x7c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
+                0x08000fa4                __swbuf_r
+ .text.__swbuf  0x08001020       0x10 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
+                0x08001020                __swbuf
  .text.__swsetup_r
-                0x08001020       0xac /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
-                0x08001020                __swsetup_r
+                0x08001030       0xac /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
+                0x08001030                __swsetup_r
  .text._printf_common
-                0x080010cc       0xda /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x080010cc                _printf_common
- *fill*         0x080011a6        0x2 
+                0x080010dc       0xda /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x080010dc                _printf_common
+ *fill*         0x080011b6        0x2 
  .text._printf_i
-                0x080011a8      0x25c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x080011a8                _printf_i
+                0x080011b8      0x25c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x080011b8                _printf_i
  .text.__sflush_r
-                0x08001404      0x100 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
-                0x08001404                __sflush_r
+                0x08001414      0x100 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
+                0x08001414                __sflush_r
  .text._fflush_r
-                0x08001504       0x50 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
-                0x08001504                _fflush_r
- .text.fflush   0x08001554       0x28 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
-                0x08001554                fflush
- .text.std      0x0800157c       0x48 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x08001514       0x50 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
+                0x08001514                _fflush_r
+ .text.fflush   0x08001564       0x28 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
+                0x08001564                fflush
+ .text.std      0x0800158c       0x48 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
  .text.stdio_exit_handler
-                0x080015c4       0x18 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x080015d4       0x18 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
  .text.cleanup_stdio
-                0x080015dc       0x40 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x080015ec       0x40 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
  .text.__fp_lock
-                0x0800161c       0x18 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x0800162c       0x18 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
  .text.__fp_unlock
-                0x08001634       0x18 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x08001644       0x18 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
  .text.global_stdio_init.part.0
-                0x0800164c       0x3c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x0800165c       0x3c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
  .text.__sfp_lock_acquire
-                0x08001688        0xc /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
-                0x08001688                __sfp_lock_acquire
+                0x08001698        0xc /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x08001698                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x08001694        0xc /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
-                0x08001694                __sfp_lock_release
- .text.__sfp    0x080016a0       0xa4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
-                0x080016a0                __sfp
- .text.__sinit  0x08001744       0x30 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
-                0x08001744                __sinit
+                0x080016a4        0xc /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x080016a4                __sfp_lock_release
+ .text.__sfp    0x080016b0       0xa4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x080016b0                __sfp
+ .text.__sinit  0x08001754       0x30 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x08001754                __sinit
  .text.__fp_lock_all
-                0x08001774       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
-                0x08001774                __fp_lock_all
+                0x08001784       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x08001784                __fp_lock_all
  .text.__fp_unlock_all
-                0x08001790       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
-                0x08001790                __fp_unlock_all
- .text.__sread  0x080017ac       0x22 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
-                0x080017ac                __sread
+                0x080017a0       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x080017a0                __fp_unlock_all
+ .text.__sread  0x080017bc       0x22 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
+                0x080017bc                __sread
  .text.__seofread
-                0x080017ce        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
-                0x080017ce                __seofread
+                0x080017de        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
+                0x080017de                __seofread
  .text.__swrite
-                0x080017d2       0x38 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
-                0x080017d2                __swrite
- .text.__sseek  0x0800180a       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
-                0x0800180a                __sseek
+                0x080017e2       0x38 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
+                0x080017e2                __swrite
+ .text.__sseek  0x0800181a       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
+                0x0800181a                __sseek
  .text.__sclose
-                0x0800182e        0x8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
-                0x0800182e                __sclose
- *fill*         0x08001836        0x2 
+                0x0800183e        0x8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
+                0x0800183e                __sclose
+ *fill*         0x08001846        0x2 
  .text._write_r
-                0x08001838       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
-                0x08001838                _write_r
- .text.__errno  0x0800185c        0xc /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
-                0x0800185c                __errno
+                0x08001848       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
+                0x08001848                _write_r
+ .text.__errno  0x0800186c        0xc /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
+                0x0800186c                __errno
  .text.__sfvwrite_r
-                0x08001868      0x2a0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
-                0x08001868                __sfvwrite_r
+                0x08001878      0x2a0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+                0x08001878                __sfvwrite_r
  .text._fwalk_sglue
-                0x08001b08       0x3c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
-                0x08001b08                _fwalk_sglue
- .text.memmove  0x08001b44       0x34 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
-                0x08001b44                memmove
- .text.memset   0x08001b78       0x10 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
-                0x08001b78                memset
+                0x08001b18       0x3c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
+                0x08001b18                _fwalk_sglue
+ .text.memmove  0x08001b54       0x34 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
+                0x08001b54                memmove
+ .text.memset   0x08001b88       0x10 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
+                0x08001b88                memset
  .text._realloc_r
-                0x08001b88       0x5c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
-                0x08001b88                _realloc_r
- .text._free_r  0x08001be4       0x94 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
-                0x08001be4                _free_r
+                0x08001b98       0x5c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
+                0x08001b98                _realloc_r
+ .text._free_r  0x08001bf4       0x94 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
+                0x08001bf4                _free_r
  .text.__retarget_lock_init
-                0x08001c78        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08001c78                __retarget_lock_init
+                0x08001c88        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+                0x08001c88                __retarget_lock_init
  .text.__retarget_lock_init_recursive
-                0x08001c7a        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08001c7a                __retarget_lock_init_recursive
+                0x08001c8a        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+                0x08001c8a                __retarget_lock_init_recursive
  .text.__retarget_lock_close
-                0x08001c7c        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08001c7c                __retarget_lock_close
- .text.__retarget_lock_close_recursive
-                0x08001c7e        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08001c7e                __retarget_lock_close_recursive
- .text.__retarget_lock_acquire
-                0x08001c80        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08001c80                __retarget_lock_acquire
- .text.__retarget_lock_acquire_recursive
-                0x08001c82        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08001c82                __retarget_lock_acquire_recursive
- .text.__retarget_lock_try_acquire
-                0x08001c84        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08001c84                __retarget_lock_try_acquire
- .text.__retarget_lock_try_acquire_recursive
-                0x08001c88        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08001c88                __retarget_lock_try_acquire_recursive
- .text.__retarget_lock_release
                 0x08001c8c        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08001c8c                __retarget_lock_release
- .text.__retarget_lock_release_recursive
+                0x08001c8c                __retarget_lock_close
+ .text.__retarget_lock_close_recursive
                 0x08001c8e        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08001c8e                __retarget_lock_release_recursive
+                0x08001c8e                __retarget_lock_close_recursive
+ .text.__retarget_lock_acquire
+                0x08001c90        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+                0x08001c90                __retarget_lock_acquire
+ .text.__retarget_lock_acquire_recursive
+                0x08001c92        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+                0x08001c92                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_try_acquire
+                0x08001c94        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+                0x08001c94                __retarget_lock_try_acquire
+ .text.__retarget_lock_try_acquire_recursive
+                0x08001c98        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+                0x08001c98                __retarget_lock_try_acquire_recursive
+ .text.__retarget_lock_release
+                0x08001c9c        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+                0x08001c9c                __retarget_lock_release
+ .text.__retarget_lock_release_recursive
+                0x08001c9e        0x2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+                0x08001c9e                __retarget_lock_release_recursive
  .text.__swhatbuf_r
-                0x08001c90       0x4c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
-                0x08001c90                __swhatbuf_r
+                0x08001ca0       0x4c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
+                0x08001ca0                __swhatbuf_r
  .text.__smakebuf_r
-                0x08001cdc       0x78 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
-                0x08001cdc                __smakebuf_r
+                0x08001cec       0x78 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
+                0x08001cec                __smakebuf_r
  .text._close_r
-                0x08001d54       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
-                0x08001d54                _close_r
+                0x08001d64       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
+                0x08001d64                _close_r
  .text._reclaim_reent
-                0x08001d74       0xac /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
-                0x08001d74                _reclaim_reent
- .text.memcpy   0x08001e20       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
-                0x08001e20                memcpy
+                0x08001d84       0xac /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
+                0x08001d84                _reclaim_reent
+ .text.memcpy   0x08001e30       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
+                0x08001e30                memcpy
  .text.sbrk_aligned
-                0x08001e3c       0x44 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
+                0x08001e4c       0x44 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
  .text._malloc_r
-                0x08001e80       0xe0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
-                0x08001e80                _malloc_r
+                0x08001e90       0xe0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
+                0x08001e90                _malloc_r
  .text._fstat_r
-                0x08001f60       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
-                0x08001f60                _fstat_r
+                0x08001f70       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
+                0x08001f70                _fstat_r
  .text._isatty_r
-                0x08001f84       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
-                0x08001f84                _isatty_r
+                0x08001f94       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
+                0x08001f94                _isatty_r
  .text._lseek_r
-                0x08001fa4       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
-                0x08001fa4                _lseek_r
- .text._read_r  0x08001fc8       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
-                0x08001fc8                _read_r
+                0x08001fb4       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
+                0x08001fb4                _lseek_r
+ .text._read_r  0x08001fd8       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
+                0x08001fd8                _read_r
  .text.__malloc_lock
-                0x08001fec        0xc /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
-                0x08001fec                __malloc_lock
+                0x08001ffc        0xc /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
+                0x08001ffc                __malloc_lock
  .text.__malloc_unlock
-                0x08001ff8        0xc /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
-                0x08001ff8                __malloc_unlock
+                0x08002008        0xc /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
+                0x08002008                __malloc_unlock
  .text._malloc_usable_size_r
-                0x08002004       0x10 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
-                0x08002004                _malloc_usable_size_r
- .text._sbrk_r  0x08002014       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
-                0x08002014                _sbrk_r
+                0x08002014       0x10 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
+                0x08002014                _malloc_usable_size_r
+ .text._sbrk_r  0x08002024       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+                0x08002024                _sbrk_r
  *(.eh_frame)
- .eh_frame      0x08002034        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
- .eh_frame      0x08002034       0x44 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
- .eh_frame      0x08002078        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtend.o
+ .eh_frame      0x08002044        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x08002044       0x44 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
+ .eh_frame      0x08002088        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtend.o
  *(.init)
- .init          0x0800207c        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crti.o
-                0x0800207c                _init
- .init          0x08002080        0x8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtn.o
+ .init          0x0800208c        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crti.o
+                0x0800208c                _init
+ .init          0x08002090        0x8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x08002088        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crti.o
-                0x08002088                _fini
- .fini          0x0800208c        0x8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtn.o
+ .fini          0x08002098        0x4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crti.o
+                0x08002098                _fini
+ .fini          0x0800209c        0x8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtn.o
  *(.ARM)
  *(.ARM*)
  .ARM.attributes
-                0x08002094       0x1e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crti.o
+                0x080020a4       0x1e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crti.o
  .ARM.attributes
-                0x080020b2       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
- .ARM.extab     0x080020e0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+                0x080020c2       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
+ .ARM.extab     0x080020f0        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
  .ARM.attributes
-                0x080020e0       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+                0x080020f0       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
  .ARM.attributes
-                0x080020fc       0x2e src/obj/main.o
+                0x0800210c       0x2e src/obj/main.o
  .ARM.attributes
-                0x0800212a       0x2e src/obj/syscalls.o
+                0x0800213a       0x2e src/obj/syscalls.o
  .ARM.attributes
-                0x08002158       0x2e src/obj/startup_STM32F401RE.o
+                0x08002168       0x2e src/obj/startup_STM32F401RE.o
  .ARM.attributes
-                0x08002186       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
+                0x08002196       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
  .ARM.attributes
-                0x080021b4       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
+                0x080021c4       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
  .ARM.attributes
-                0x080021e2       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
+                0x080021f2       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
  .ARM.attributes
-                0x08002210       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x08002220       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
  .ARM.attributes
-                0x0800223e       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
+                0x0800224e       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
  .ARM.attributes
-                0x0800226c       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
+                0x0800227c       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
  .ARM.attributes
-                0x0800229a       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x080022aa       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
  .ARM.attributes
-                0x080022c8       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-impure.o)
+                0x080022d8       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-impure.o)
  .ARM.attributes
-                0x080022f6       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
- .ARM.extab     0x08002324        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
+                0x08002306       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
+ .ARM.extab     0x08002334        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
  .ARM.attributes
-                0x08002324       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
+                0x08002334       0x1c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
  .ARM.attributes
-                0x08002340       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+                0x08002350       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
  .ARM.attributes
-                0x0800236e       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
+                0x0800237e       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
  .ARM.attributes
-                0x0800239c       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
+                0x080023ac       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
  .ARM.attributes
-                0x080023ca       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
+                0x080023da       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
  .ARM.attributes
-                0x080023f8       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+                0x08002408       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
  .ARM.attributes
-                0x08002426       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
+                0x08002436       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
  .ARM.attributes
-                0x08002454       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
+                0x08002464       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
  .ARM.attributes
-                0x08002482       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
+                0x08002492       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
  .ARM.attributes
-                0x080024b0       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
+                0x080024c0       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
  .ARM.attributes
-                0x080024de       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
+                0x080024ee       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
  .ARM.attributes
-                0x0800250c       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+                0x0800251c       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
  .ARM.attributes
-                0x0800253a       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
+                0x0800254a       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
  .ARM.attributes
-                0x08002568       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
+                0x08002578       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
  .ARM.attributes
-                0x08002596       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
+                0x080025a6       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
  .ARM.attributes
-                0x080025c4       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
+                0x080025d4       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
  .ARM.attributes
-                0x080025f2       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
+                0x08002602       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
  .ARM.attributes
-                0x08002620       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
+                0x08002630       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
  .ARM.attributes
-                0x0800264e       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
+                0x0800265e       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
  .ARM.attributes
-                0x0800267c       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
+                0x0800268c       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
  .ARM.attributes
-                0x080026aa       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
+                0x080026ba       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
  .ARM.attributes
-                0x080026d8       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
+                0x080026e8       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
  .ARM.attributes
-                0x08002706       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
+                0x08002716       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
  .ARM.attributes
-                0x08002734       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+                0x08002744       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
  .ARM.attributes
-                0x08002762       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtend.o
+                0x08002772       0x2e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtend.o
  .ARM.attributes
-                0x08002790       0x1e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtn.o
- *fill*         0x080027ae        0x2 
- .ARM.exidx     0x080027b0        0x8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+                0x080027a0       0x1e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtn.o
+ *fill*         0x080027be        0x2 
+ .ARM.exidx     0x080027c0        0x8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
                                  0x10 (size before relaxing)
- .ARM.exidx     0x080027b8        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
+ .ARM.exidx     0x080027c8        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
                                   0x8 (size before relaxing)
  *(.rodata)
- *fill*         0x080027b8        0x0 
- .rodata        0x080027b8       0x27 src/obj/main.o
-                0x080027b8                RCC
-                0x080027bc                GPIOA
-                0x080027c0                GPIOB
-                0x080027c4                USART2
-                0x080027c8                NVIC
-                0x080027cc                I2C1
+ *fill*         0x080027c8        0x0 
+ .rodata        0x080027c8       0x27 src/obj/main.o
+                0x080027c8                RCC
+                0x080027cc                GPIOA
+                0x080027d0                GPIOB
+                0x080027d4                USART2
+                0x080027d8                NVIC
+                0x080027dc                I2C1
  *(.rodata.*)
- *fill*         0x080027df        0x1 
+ *fill*         0x080027ef        0x1 
  .rodata.all_implied_fbits
-                0x080027e0       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
+                0x080027f0       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
  .rodata._vfprintf_r.str1.1
-                0x08002804       0x11 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x08002814       0x11 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
  .rodata._printf_i.str1.1
-                0x08002815       0x22 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- *fill*         0x08002837        0x1 
+                0x08002825       0x22 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ *fill*         0x08002847        0x1 
  .rodata.all_implied_fbits
-                0x08002838       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtend.o
-                0x0800285c                        . = ALIGN (0x4)
-                0x0800285c                        _sidata = LOADADDR (.data)
+                0x08002848       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtend.o
+                0x0800286c                        . = ALIGN (0x4)
+                0x0800286c                        _sidata = LOADADDR (.data)
 
-.glue_7         0x0800285c        0x0
- .glue_7        0x0800285c        0x0 linker stubs
+.glue_7         0x0800286c        0x0
+ .glue_7        0x0800286c        0x0 linker stubs
 
-.glue_7t        0x0800285c        0x0
- .glue_7t       0x0800285c        0x0 linker stubs
+.glue_7t        0x0800286c        0x0
+ .glue_7t       0x0800286c        0x0 linker stubs
 
-.vfp11_veneer   0x0800285c        0x0
- .vfp11_veneer  0x0800285c        0x0 linker stubs
+.vfp11_veneer   0x0800286c        0x0
+ .vfp11_veneer  0x0800286c        0x0 linker stubs
 
-.v4_bx          0x0800285c        0x0
- .v4_bx         0x0800285c        0x0 linker stubs
+.v4_bx          0x0800286c        0x0
+ .v4_bx         0x0800286c        0x0 linker stubs
 
-.iplt           0x0800285c        0x0
- .iplt          0x0800285c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x0800286c        0x0
+ .iplt          0x0800286c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
 
-.rel.dyn        0x0800285c        0x0
- .rel.iplt      0x0800285c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x0800286c        0x0
+ .rel.iplt      0x0800286c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
 
-.data           0x20000000       0x6c load address 0x0800285c
+.data           0x20000000       0x6c load address 0x0800286c
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -651,16 +651,16 @@ LOAD /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x
                 0x2000006c                        _edata = .
 
 .tm_clone_table
-                0x2000006c        0x0 load address 0x080028c8
+                0x2000006c        0x0 load address 0x080028d8
  .tm_clone_table
                 0x2000006c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
  .tm_clone_table
                 0x2000006c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtend.o
 
-.igot.plt       0x2000006c        0x0 load address 0x080028c8
+.igot.plt       0x2000006c        0x0 load address 0x080028d8
  .igot.plt      0x2000006c        0x0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtbegin.o
 
-.bss            0x2000006c      0x174 load address 0x080028c8
+.bss            0x2000006c      0x174 load address 0x080028d8
                 0x2000006c                        . = ALIGN (0x4)
                 0x2000006c                        _sbss = .
                 0x2000006c                        __bss_start__ = _sbss
@@ -797,44 +797,44 @@ LOAD linker stubs
  .comment       0x0000004c       0x4d /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
  .comment       0x0000004c       0x4d /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/thumb/v7e-m/nofp/crtend.o
 
-.debug_line     0x00000000     0x6a57
+.debug_line     0x00000000     0x6a53
  .debug_line    0x00000000       0x76 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .debug_line    0x00000076      0x52c src/obj/main.o
- .debug_line    0x000005a2      0x3b2 src/obj/syscalls.o
- .debug_line    0x00000954      0x1a8 src/obj/startup_STM32F401RE.o
- .debug_line    0x00000afc      0x19a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
- .debug_line    0x00000c96      0x188 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
- .debug_line    0x00000e1e      0x26b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
- .debug_line    0x00001089      0x700 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_line    0x00001789      0x2e6 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
- .debug_line    0x00001a6f      0x316 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
- .debug_line    0x00001d85      0x780 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_line    0x00002505      0x16c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-impure.o)
- .debug_line    0x00002671      0x4a6 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
- .debug_line    0x00002b17       0x81 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
- .debug_line    0x00002b98      0x589 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
- .debug_line    0x00003121      0x2fb /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
- .debug_line    0x0000341c      0x22c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
- .debug_line    0x00003648      0x18e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
- .debug_line    0x000037d6      0x61b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
- .debug_line    0x00003df1      0x24b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
- .debug_line    0x0000403c      0x1c5 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
- .debug_line    0x00004201      0x187 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_line    0x00004388      0x286 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
- .debug_line    0x0000460e      0x327 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
- .debug_line    0x00004935      0x1ad /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
- .debug_line    0x00004ae2      0x3cd /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
- .debug_line    0x00004eaf      0x22d /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
- .debug_line    0x000050dc      0x2e9 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
- .debug_line    0x000053c5      0x214 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
- .debug_line    0x000055d9      0x4ec /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
- .debug_line    0x00005ac5      0x2ca /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
- .debug_line    0x00005d8f      0x22e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
- .debug_line    0x00005fbd      0x22c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
- .debug_line    0x000061e9      0x22b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
- .debug_line    0x00006414      0x1ff /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
- .debug_line    0x00006613      0x217 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
- .debug_line    0x0000682a      0x22d /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+ .debug_line    0x00000076      0x528 src/obj/main.o
+ .debug_line    0x0000059e      0x3b2 src/obj/syscalls.o
+ .debug_line    0x00000950      0x1a8 src/obj/startup_STM32F401RE.o
+ .debug_line    0x00000af8      0x19a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
+ .debug_line    0x00000c92      0x188 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_line    0x00000e1a      0x26b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
+ .debug_line    0x00001085      0x700 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_line    0x00001785      0x2e6 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
+ .debug_line    0x00001a6b      0x316 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
+ .debug_line    0x00001d81      0x780 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_line    0x00002501      0x16c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-impure.o)
+ .debug_line    0x0000266d      0x4a6 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
+ .debug_line    0x00002b13       0x81 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
+ .debug_line    0x00002b94      0x589 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .debug_line    0x0000311d      0x2fb /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
+ .debug_line    0x00003418      0x22c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
+ .debug_line    0x00003644      0x18e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
+ .debug_line    0x000037d2      0x61b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+ .debug_line    0x00003ded      0x24b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
+ .debug_line    0x00004038      0x1c5 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .debug_line    0x000041fd      0x187 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_line    0x00004384      0x286 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .debug_line    0x0000460a      0x327 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
+ .debug_line    0x00004931      0x1ad /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+ .debug_line    0x00004ade      0x3cd /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
+ .debug_line    0x00004eab      0x22d /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
+ .debug_line    0x000050d8      0x2e9 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
+ .debug_line    0x000053c1      0x214 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_line    0x000055d5      0x4ec /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .debug_line    0x00005ac1      0x2ca /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
+ .debug_line    0x00005d8b      0x22e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
+ .debug_line    0x00005fb9      0x22c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
+ .debug_line    0x000061e5      0x22b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
+ .debug_line    0x00006410      0x1ff /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .debug_line    0x0000660f      0x217 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .debug_line    0x00006826      0x22d /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
 
 .debug_line_str
                 0x00000000      0x1d0
@@ -843,83 +843,83 @@ LOAD linker stubs
  .debug_line_str
                 0x000000e9       0xe7 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
 
-.debug_info     0x00000000    0x10998
+.debug_info     0x00000000    0x109bb
  .debug_info    0x00000000       0x24 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .debug_info    0x00000024      0x6d9 src/obj/main.o
- .debug_info    0x000006fd      0xa5b src/obj/syscalls.o
- .debug_info    0x00001158      0x185 src/obj/startup_STM32F401RE.o
- .debug_info    0x000012dd      0x11b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
- .debug_info    0x000013f8      0x10b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
- .debug_info    0x00001503      0x83a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
- .debug_info    0x00001d3d     0x1079 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_info    0x00002db6      0x867 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
- .debug_info    0x0000361d      0x7ba /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
- .debug_info    0x00003dd7      0xddf /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_info    0x00004bb6      0x714 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-impure.o)
- .debug_info    0x000052ca      0x9ee /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
- .debug_info    0x00005cb8       0x25 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
- .debug_info    0x00005cdd      0xf8f /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
- .debug_info    0x00006c6c      0xa53 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
- .debug_info    0x000076bf      0x7b2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
- .debug_info    0x00007e71      0x6fa /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
- .debug_info    0x0000856b      0xb39 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
- .debug_info    0x000090a4      0x7d1 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
- .debug_info    0x00009875      0x10f /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
- .debug_info    0x00009984       0xe0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_info    0x00009a64      0x8c6 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
- .debug_info    0x0000a32a      0x84a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
- .debug_info    0x0000ab74      0x20a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
- .debug_info    0x0000ad7e      0xb19 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
- .debug_info    0x0000b897      0x755 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
- .debug_info    0x0000bfec      0x854 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
- .debug_info    0x0000c840      0x121 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
- .debug_info    0x0000c961      0x9b5 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
- .debug_info    0x0000d316      0x974 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
- .debug_info    0x0000dc8a      0x755 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
- .debug_info    0x0000e3df      0x795 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
- .debug_info    0x0000eb74      0x7ac /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
- .debug_info    0x0000f320      0x76a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
- .debug_info    0x0000fa8a      0x793 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
- .debug_info    0x0001021d      0x77b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+ .debug_info    0x00000024      0x6fc src/obj/main.o
+ .debug_info    0x00000720      0xa5b src/obj/syscalls.o
+ .debug_info    0x0000117b      0x185 src/obj/startup_STM32F401RE.o
+ .debug_info    0x00001300      0x11b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
+ .debug_info    0x0000141b      0x10b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_info    0x00001526      0x83a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
+ .debug_info    0x00001d60     0x1079 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_info    0x00002dd9      0x867 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
+ .debug_info    0x00003640      0x7ba /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
+ .debug_info    0x00003dfa      0xddf /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_info    0x00004bd9      0x714 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-impure.o)
+ .debug_info    0x000052ed      0x9ee /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
+ .debug_info    0x00005cdb       0x25 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
+ .debug_info    0x00005d00      0xf8f /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .debug_info    0x00006c8f      0xa53 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
+ .debug_info    0x000076e2      0x7b2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
+ .debug_info    0x00007e94      0x6fa /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
+ .debug_info    0x0000858e      0xb39 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+ .debug_info    0x000090c7      0x7d1 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
+ .debug_info    0x00009898      0x10f /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .debug_info    0x000099a7       0xe0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_info    0x00009a87      0x8c6 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .debug_info    0x0000a34d      0x84a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
+ .debug_info    0x0000ab97      0x20a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+ .debug_info    0x0000ada1      0xb19 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
+ .debug_info    0x0000b8ba      0x755 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
+ .debug_info    0x0000c00f      0x854 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
+ .debug_info    0x0000c863      0x121 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_info    0x0000c984      0x9b5 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .debug_info    0x0000d339      0x974 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
+ .debug_info    0x0000dcad      0x755 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
+ .debug_info    0x0000e402      0x795 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
+ .debug_info    0x0000eb97      0x7ac /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
+ .debug_info    0x0000f343      0x76a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .debug_info    0x0000faad      0x793 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .debug_info    0x00010240      0x77b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
 
-.debug_abbrev   0x00000000     0x3ff0
+.debug_abbrev   0x00000000     0x400b
  .debug_abbrev  0x00000000       0x14 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .debug_abbrev  0x00000014      0x1ea src/obj/main.o
- .debug_abbrev  0x000001fe      0x282 src/obj/syscalls.o
- .debug_abbrev  0x00000480      0x10d src/obj/startup_STM32F401RE.o
- .debug_abbrev  0x0000058d       0xd8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
- .debug_abbrev  0x00000665       0xc9 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
- .debug_abbrev  0x0000072e      0x21a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
- .debug_abbrev  0x00000948      0x317 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_abbrev  0x00000c5f      0x22d /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
- .debug_abbrev  0x00000e8c      0x1e2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
- .debug_abbrev  0x0000106e      0x28f /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_abbrev  0x000012fd      0x149 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-impure.o)
- .debug_abbrev  0x00001446      0x2a8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
- .debug_abbrev  0x000016ee       0x14 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
- .debug_abbrev  0x00001702      0x40c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
- .debug_abbrev  0x00001b0e      0x221 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
- .debug_abbrev  0x00001d2f      0x1b5 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
- .debug_abbrev  0x00001ee4      0x15e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
- .debug_abbrev  0x00002042      0x21b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
- .debug_abbrev  0x0000225d      0x19b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
- .debug_abbrev  0x000023f8       0xac /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
- .debug_abbrev  0x000024a4       0x9e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_abbrev  0x00002542      0x217 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
- .debug_abbrev  0x00002759      0x236 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
- .debug_abbrev  0x0000298f      0x115 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
- .debug_abbrev  0x00002aa4      0x28e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
- .debug_abbrev  0x00002d32      0x1b0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
- .debug_abbrev  0x00002ee2      0x1ed /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
- .debug_abbrev  0x000030cf       0xc1 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
- .debug_abbrev  0x00003190      0x24a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
- .debug_abbrev  0x000033da      0x1c3 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
- .debug_abbrev  0x0000359d      0x1b0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
- .debug_abbrev  0x0000374d      0x1c4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
- .debug_abbrev  0x00003911      0x1b0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
- .debug_abbrev  0x00003ac1      0x1bf /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
- .debug_abbrev  0x00003c80      0x196 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
- .debug_abbrev  0x00003e16      0x1da /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+ .debug_abbrev  0x00000014      0x205 src/obj/main.o
+ .debug_abbrev  0x00000219      0x282 src/obj/syscalls.o
+ .debug_abbrev  0x0000049b      0x10d src/obj/startup_STM32F401RE.o
+ .debug_abbrev  0x000005a8       0xd8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
+ .debug_abbrev  0x00000680       0xc9 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_abbrev  0x00000749      0x21a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
+ .debug_abbrev  0x00000963      0x317 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_abbrev  0x00000c7a      0x22d /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
+ .debug_abbrev  0x00000ea7      0x1e2 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
+ .debug_abbrev  0x00001089      0x28f /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_abbrev  0x00001318      0x149 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-impure.o)
+ .debug_abbrev  0x00001461      0x2a8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
+ .debug_abbrev  0x00001709       0x14 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memchr.o)
+ .debug_abbrev  0x0000171d      0x40c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .debug_abbrev  0x00001b29      0x221 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
+ .debug_abbrev  0x00001d4a      0x1b5 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
+ .debug_abbrev  0x00001eff      0x15e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
+ .debug_abbrev  0x0000205d      0x21b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+ .debug_abbrev  0x00002278      0x19b /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
+ .debug_abbrev  0x00002413       0xac /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .debug_abbrev  0x000024bf       0x9e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_abbrev  0x0000255d      0x217 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .debug_abbrev  0x00002774      0x236 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
+ .debug_abbrev  0x000029aa      0x115 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+ .debug_abbrev  0x00002abf      0x28e /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
+ .debug_abbrev  0x00002d4d      0x1b0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
+ .debug_abbrev  0x00002efd      0x1ed /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
+ .debug_abbrev  0x000030ea       0xc1 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_abbrev  0x000031ab      0x24a /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .debug_abbrev  0x000033f5      0x1c3 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
+ .debug_abbrev  0x000035b8      0x1b0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
+ .debug_abbrev  0x00003768      0x1c4 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
+ .debug_abbrev  0x0000392c      0x1b0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
+ .debug_abbrev  0x00003adc      0x1bf /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .debug_abbrev  0x00003c9b      0x196 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .debug_abbrev  0x00003e31      0x1da /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
 
 .debug_aranges  0x00000000      0x5b8
  .debug_aranges
@@ -1072,41 +1072,41 @@ LOAD linker stubs
  .debug_str     0x0000218c       0x61 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
                                 0x52f (size before relaxing)
 
-.debug_frame    0x00000000      0xda0
- .debug_frame   0x00000000      0x128 src/obj/main.o
- .debug_frame   0x00000128      0x354 src/obj/syscalls.o
- .debug_frame   0x0000047c       0x4c src/obj/startup_STM32F401RE.o
- .debug_frame   0x000004c8       0x28 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
- .debug_frame   0x000004f0       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
- .debug_frame   0x0000051c       0x6c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
- .debug_frame   0x00000588       0xa8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_frame   0x00000630       0x40 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
- .debug_frame   0x00000670       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
- .debug_frame   0x0000069c       0x60 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_frame   0x000006fc       0x5c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
- .debug_frame   0x00000758      0x13c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
- .debug_frame   0x00000894       0x88 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
- .debug_frame   0x0000091c       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
- .debug_frame   0x00000948       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
- .debug_frame   0x00000968       0x3c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
- .debug_frame   0x000009a4       0x34 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
- .debug_frame   0x000009d8       0x28 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
- .debug_frame   0x00000a00       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_frame   0x00000a20       0x3c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
- .debug_frame   0x00000a5c       0x38 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
- .debug_frame   0x00000a94       0xb0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
- .debug_frame   0x00000b44       0x58 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
- .debug_frame   0x00000b9c       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
- .debug_frame   0x00000bc8       0x38 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
- .debug_frame   0x00000c00       0x28 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
- .debug_frame   0x00000c28       0x4c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
- .debug_frame   0x00000c74       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
- .debug_frame   0x00000ca0       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
- .debug_frame   0x00000ccc       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
- .debug_frame   0x00000cf8       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
- .debug_frame   0x00000d24       0x30 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
- .debug_frame   0x00000d54       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
- .debug_frame   0x00000d74       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+.debug_frame    0x00000000      0xda4
+ .debug_frame   0x00000000      0x12c src/obj/main.o
+ .debug_frame   0x0000012c      0x354 src/obj/syscalls.o
+ .debug_frame   0x00000480       0x4c src/obj/startup_STM32F401RE.o
+ .debug_frame   0x000004cc       0x28 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-exit.o)
+ .debug_frame   0x000004f4       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_frame   0x00000520       0x6c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-printf.o)
+ .debug_frame   0x0000058c       0xa8 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_frame   0x00000634       0x40 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wbuf.o)
+ .debug_frame   0x00000674       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-wsetup.o)
+ .debug_frame   0x000006a0       0x60 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_frame   0x00000700       0x5c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fflush.o)
+ .debug_frame   0x0000075c      0x13c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .debug_frame   0x00000898       0x88 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-stdio.o)
+ .debug_frame   0x00000920       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-writer.o)
+ .debug_frame   0x0000094c       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-errno.o)
+ .debug_frame   0x0000096c       0x3c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fvwrite.o)
+ .debug_frame   0x000009a8       0x34 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fwalk.o)
+ .debug_frame   0x000009dc       0x28 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .debug_frame   0x00000a04       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_frame   0x00000a24       0x3c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .debug_frame   0x00000a60       0x38 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-freer.o)
+ .debug_frame   0x00000a98       0xb0 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lock.o)
+ .debug_frame   0x00000b48       0x58 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-makebuf.o)
+ .debug_frame   0x00000ba0       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-closer.o)
+ .debug_frame   0x00000bcc       0x38 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-reent.o)
+ .debug_frame   0x00000c04       0x28 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_frame   0x00000c2c       0x4c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .debug_frame   0x00000c78       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-fstatr.o)
+ .debug_frame   0x00000ca4       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-isattyr.o)
+ .debug_frame   0x00000cd0       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-lseekr.o)
+ .debug_frame   0x00000cfc       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-readr.o)
+ .debug_frame   0x00000d28       0x30 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .debug_frame   0x00000d58       0x20 /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .debug_frame   0x00000d78       0x2c /home/strayker/Pkgs/arm-gnu-toolchain/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(libc_a-sbrkr.o)
 
 .debug_loclists
                 0x00000000     0x1fd0

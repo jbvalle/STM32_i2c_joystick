@@ -6,6 +6,7 @@
 
 #define USART2_IRQn 38
 
+#define TIMESPACE 7
 #define MODER 2
 #define pin5 5
 
@@ -154,13 +155,17 @@ void checkINT_init(void){
     GPIOB->GPIOx_MODER &= ~(3 << (10 * 2));     //SET PB10 as INPUT
 }
 
-void checkINT(void){
+void checkINT(uint8_t *x_coord, uint8_t *y_coord){
 
 
-    if(GPIOB->GPIOx_IDR & (1 << 10)){
+    if(!(GPIOB->GPIOx_IDR & (1 << 10))){
 
         GPIOA->GPIOx_ODR ^= (1 << pin5);
 
+        I2C1_byte_read(0x40, 0x10, x_coord);
+        I2C1_byte_read(0x40, 0x11, y_coord);
+
+        printf("\n\rX: %d, Y: %d", *x_coord, *y_coord);
 
     }
 }
@@ -173,11 +178,11 @@ int main(void){
     initialise_monitor_handles();
 
     // I2CAGC
-
-    uint8_t data = 0x0;
-
     uint8_t x_coord;
     uint8_t y_coord;
+
+
+    uint8_t data = 0x0;
 
     configure_i2c_pullup();
 
@@ -205,38 +210,17 @@ int main(void){
     I2C1_byte_write(0x40, 0x2D, 10);
 
     // Set CR : IDLE, NO INT
-    I2C1_byte_write(0x40, 0x0F, (0x00 | (5 << 4)));
+    I2C1_byte_write(0x40, 0x0F, (0x00 | (TIMESPACE << 4)));
 
     checkINT_init();
 
     for(;;){
 
-        checkINT();
-
-        I2C1_byte_read(0x40, 0x10, &x_coord);
-        I2C1_byte_read(0x40, 0x11, &y_coord);
-
-        printf("\n\rX: %d, Y: %d", x_coord, y_coord);
+        checkINT(&x_coord, &y_coord);
     }
 }
-
-
 /*
-   printf("\n\n\r");
-   printf("\n\r+--------------+");
-   printf("\n\r|   Addition   |");
-   printf("\n\r+--------------+");
-
-   puts("\n\rType in the first number:\r");
-   for(int i = 0; i < 10; i++) input[i++] = '\0';
-   for(int i = 0; (letter = UART_read()) != '\r'; ) input[i++] = letter;
    sscanf(input, "%d", &a);
-
    puts("\n\rType in the second number:\r");
-   for(int i = 0; i < 10; i++) input[i++] = '\0';
-   for(int i = 0; (letter = UART_read()) != '\r'; ) input[i++] = letter;
-   sscanf(input, "%d", &b);
-
    printf("\n\n\rResult: %d + %d = %d", a, b, a + b) ;
-
 */
