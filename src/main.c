@@ -5,8 +5,10 @@
 #include "../inc/peripherals.h"
 
 #define USART2_IRQn 38
+#define LOWPOWERMODE 0
+#define IDLEMODE     1
 
-#define TIMESPACE 7
+#define TIMESPACE 4
 #define MODER 2
 #define pin5 5
 
@@ -45,8 +47,19 @@ void wait_ms(int time){
 
 
 void I2C1_init(void){
+
+    /*Indication LED*/
+
+    //Enable Clock to GPIOA Peripheral
+    RCC->RCC_AHB1ENR |= 1;
+    // Reset MODER Bitfield of PA5
+    GPIOA->GPIOx_MODER &= ~(3 << (pin5 * MODER));
+    // Write Value 1 to MODER Bitfield PA5 to configure PA5 as OUTPUT
+    GPIOA->GPIOx_MODER |=  (1 << (pin5 * MODER));
     RCC->RCC_AHB1ENR |= 2;                  //Enable GPIOB Clock
     RCC->RCC_APB1ENR |= (1 << 21);          //Enable I2C Clock
+                                            //
+    /**************************************/
 
     /* Configure PB8, PB9 */
     GPIOB->GPIOx_AFRH &= ~0xFF;             //Set Alternate Function AF04 for PB8, PB9
@@ -170,31 +183,53 @@ void checkINT(uint8_t *x_coord, uint8_t *y_coord){
     }
 }
 
-int main(void){
+int determineTimebase(int *timebase_){
 
-    int a, b;
+    int* timebase = timebase_;
+
     char input[10], letter;
+
+    puts("\n\rWould you like to enter Low Power Mode? (y/n)\n\r");
+    for(int i = 0; i < 10; i++) input[i++] = '\0';
+    for(int i = 0; (letter = UART_read()) != '\r'; ) input[i++] = letter;
+
+    if(strcmp(input, "y") == 0){
+
+        puts("\n\rChoose a timebase:\n\r");
+        puts("\n\r 20ms | 0");
+        puts("\r 40ms | 1");
+        puts("\r 80ms | 2");
+        puts("\r100ms | 3");
+        puts("\r140ms | 4");
+        puts("\r200ms | 5");
+        puts("\r260ms | 6");
+        puts("\r320ms | 7\n\r");
+
+        for(int i = 0; i < 10; i++) input[i++] = '\0';
+        for(int i = 0; (letter = UART_read()) != '\r'; ) input[i++] = letter;
+        sscanf(input, "%d", timebase);
+        printf("\n\rYou chose timebase %d", *timebase);
+
+        return LOWPOWERMODE;
+    }
+
+    return IDLEMODE;
+}
+
+int main(void){
 
     initialise_monitor_handles();
 
     // I2CAGC
     uint8_t x_coord;
     uint8_t y_coord;
-
-
     uint8_t data = 0x0;
+    int timebase;
+    uint8_t config_data = 0x00;
 
     configure_i2c_pullup();
-
     I2C1_init();
 
-    //Enable Clock to GPIOA Peripheral
-    RCC->RCC_AHB1ENR |= 1;
-
-    // Reset MODER Bitfield of PA5
-    GPIOA->GPIOx_MODER &= ~(3 << (pin5 * MODER));
-    // Write Value 1 to MODER Bitfield PA5 to configure PA5 as OUTPUT
-    GPIOA->GPIOx_MODER |=  (1 << (pin5 * MODER));
 
     //Check if reset is done correctly
     while(!(data & 1)){
@@ -209,8 +244,18 @@ int main(void){
     // Set Scaling factor to 90%
     I2C1_byte_write(0x40, 0x2D, 10);
 
+    if(determineTimebase(&timebase) == LOWPOWERMODE){
+
+        config_data &= ~(1 << 8);
+
+    }else{
+
+        timebase = 0;
+        config_data |= (1 << 8);
+    }
+
     // Set CR : IDLE, NO INT
-    I2C1_byte_write(0x40, 0x0F, (0x00 | (TIMESPACE << 4)));
+    I2C1_byte_write(0x40, 0x0F, (config_data | (timebase << 4)));
 
     checkINT_init();
 
@@ -223,4 +268,4 @@ int main(void){
    sscanf(input, "%d", &a);
    puts("\n\rType in the second number:\r");
    printf("\n\n\rResult: %d + %d = %d", a, b, a + b) ;
-*/
+   */
