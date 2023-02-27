@@ -56,7 +56,7 @@
 #include <time.h>
 #include <sys/time.h>
 #include <sys/times.h>
-#include "peripherals.h"
+#include "../inc/peripherals.h"
 
 /* Variables */
 //#undef errno

@@ -128,7 +128,10 @@ typedef struct I2C_t{
 }I2C_t;
 extern RCC_t * const RCC;
 extern GPIOx_t * const GPIOA;
+extern GPIOx_t * const GPIOB;
 extern USART_t * const USART2;
 extern NVIC_t * const NVIC;
+extern USART_t * const USART2;
+extern I2C_t   * const I2C1;
 
 #endif
