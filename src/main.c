@@ -54,12 +54,26 @@ int main(void){
 
     if(determineTimebase(&timebase) == LOWPOWERMODE){
 
-        config_data &= ~(1 << 8);
+        config_data &= ~(1 << 7);
+        config_data &= ~(1 << 3);
 
     }else{
 
         timebase = 0;
-        config_data |= (1 << 8);
+        config_data |= (1 << 7);
+        config_data |= (1 << 3);
+
+        for(;;){
+
+            GPIOA->GPIOx_ODR ^= (1 << pin5);
+
+            I2C1_byte_write(0x40, 0x0F, (config_data | (timebase << 4)));
+
+            I2C1_byte_read(0x40, 0x10, &x_coord);
+            I2C1_byte_read(0x40, 0x11, &y_coord);
+
+            printf("\n\rX: %d, Y: %d", x_coord, y_coord);
+        }
     }
 
     // Set CR : IDLE, NO INT
