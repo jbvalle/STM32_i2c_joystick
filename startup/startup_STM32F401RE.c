@@ -186,6 +186,7 @@ void (* const fpn_vector[])(void) = {
 };
 
 void Reset_handler(void){
+
     /** Copy Data from FLASH to SRAM **/
     uint32_t * pSRC = (uint32_t *)&_sidata;
     uint32_t * pDST = (uint32_t *)&_sdata;

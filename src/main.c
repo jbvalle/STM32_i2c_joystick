@@ -24,8 +24,6 @@ void wait_ms(int time){
     }
 }
 
-
-
 int main(void){
 
     initialise_monitor_handles();

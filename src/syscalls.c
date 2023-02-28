@@ -107,6 +107,7 @@ void UART_CONFIG_init(void){
 
     /** Set Baud Rate Register **/
     USART2->USART_BRR &= ~0xFFFF;
+    //16MHz / (8 * (2 - OVER8) * BAUD)
     USART2->USART_BRR = 0x683;
 
     // SET OVER8=0

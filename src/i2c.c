@@ -36,7 +36,7 @@ void I2C1_init(void){
     /**************************************/
 
 
-    /* Configure PB8, PB9 */
+    /* Configure PB8:SCL, PB9: SDA*/
     GPIOB->GPIOx_AFRH &= ~0xFF;             //Set Alternate Function AF04 for PB8, PB9
     GPIOB->GPIOx_AFRH |= 0x44;                                        
     GPIOB->GPIOx_MODER &= ~(3 << (2 * 8));  //Set MODER to use AF
@@ -160,11 +160,12 @@ void EXTI15_10_handler(void){
 
     printf("\n\rX: %d, Y: %d", x_coord_int, y_coord_int);
 
-    //RESET Pending bit
+    //RESET Pending~0x8000;               //deactivate RESET bit
     EXTI->EXTI_PR |= (1 << 10);
 }
 
 void gpio_interrupt_init(void){
+
     global_disable_IRQ();
 
     //Enable GPIOB
