@@ -7,6 +7,8 @@
 void initialise_monitor_handles(void);
 char UART_read(void);
 void wait_ms(int time);
+void global_enable_IRQ(void);
+void global_disable_IRQ(void);
 
 void I2C1_init(void){
 
@@ -128,9 +130,51 @@ void configure_i2c_pullup(void){
 }
 
 void checkINT_init(void){
-    RCC->RCC_AHB1ENR |= (1 << 1);
 
-    GPIOB->GPIOx_MODER &= ~(3 << (10 * 2));     //SET PB10 as INPUT
+    global_disable_IRQ();
+
+    //Enable GPIOB
+    RCC->RCC_AHB1ENR |= (1 << 1);
+    //Set PB10 to INPUT
+    GPIOB->GPIOx_MODER &= ~(3 << (10 * 2));     
+
+    //Enable SYSCFG for Multiplexing EXTI lines
+    RCC->RCC_APB2ENR |= (1 << 14);
+
+    //Unmask Peripheral on line 10
+    EXTI->EXTI_IMR |= (1 << 10);
+
+    //Enable Rising Edge Trigger
+    EXTI->EXTI_RTSR |= (1 << 10);
+    EXTI->EXTI_FTSR &= ~(1 << 10);
+
+    //Configure SYSCFG Multiplexer
+    SYSCFG->SYSCFG_EXTICR3 &= ~(0xF << 8);
+    SYSCFG->SYSCFG_EXTICR3 |= (1 << 8);
+
+    //Unmask interrupt line on the NVIC
+    NVIC->ISER[1] |= (1 << (IRQn_EXIT13 % 32));
+
+    global_enable_IRQ();
+}
+
+
+void EXTI15_10_handler(void){
+
+    uint8_t x_coord_int;
+    uint8_t y_coord_int;
+
+    printf("\n\rInterrupt was called\n\r");
+
+    GPIOA->GPIOx_ODR ^= (1 << pin5);
+
+    I2C1_byte_read(0x40, 0x10, &x_coord_int);
+    I2C1_byte_read(0x40, 0x11, &y_coord_int);
+
+    printf("\n\rX: %d, Y: %d", x_coord_int, y_coord_int);
+
+    //RESET Pending bit
+    EXTI->EXTI_PR |= (1 << 10);
 }
 
 void checkINT(uint8_t *x_coord, uint8_t *y_coord){
