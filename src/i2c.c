@@ -6,6 +6,7 @@
 
 void initialise_monitor_handles(void);
 char UART_read(void);
+void wait_ms(int time);
 
 void I2C1_init(void){
 
@@ -173,6 +174,8 @@ int determineTimebase(int *timebase_){
         for(int i = 0; (letter = UART_read()) != '\r'; ) input[i++] = letter;
         sscanf(input, "%d", timebase);
         printf("\n\rYou chose timebase %d", *timebase);
+
+        wait_ms(1000);
 
         return LOWPOWERMODE;
     }
