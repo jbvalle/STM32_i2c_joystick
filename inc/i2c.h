@@ -6,6 +6,8 @@
 #define LOWPOWERMODE 0
 #define IDLEMODE     1
 
+#define IRQn_EXTI10 40
+
 #define TIMESPACE 4
 #define MODER 2
 #define pin5 5

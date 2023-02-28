@@ -11,6 +11,8 @@ GPIOx_t * const GPIOB   = (GPIOx_t  *)  (0x40020000 + 0x400);
 USART_t * const USART2  = (USART_t  *)  0x40004400;
 NVIC_t  * const NVIC    = (NVIC_t   *)  0xE000E100;
 I2C_t   * const I2C1    = (I2C_t    *)  0x40005400;
+SYSCFG_t    * const SYSCFG  = (SYSCFG_t *)  0x40013800;
+EXTI_t      * const EXTI    = (EXTI_t   *)  0x40013C00;
 
 void initialise_monitor_handles(void);
 char UART_read(void);

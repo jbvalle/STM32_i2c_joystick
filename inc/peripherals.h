@@ -134,4 +134,7 @@ extern NVIC_t * const NVIC;
 extern USART_t * const USART2;
 extern I2C_t   * const I2C1;
 
+extern SYSCFG_t    * const SYSCFG;
+extern EXTI_t      * const EXTI;
+
 #endif
